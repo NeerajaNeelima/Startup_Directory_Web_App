@@ -8,10 +8,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
 
-app.get("/",cors(),(req,res) =>{
-    
- })
-//middleware
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to ecommerce app</h1>");
+});
 app.use("/api", company)
 
 app.listen(5000,() => {
